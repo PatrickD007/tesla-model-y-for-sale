@@ -8,7 +8,7 @@
 <meta property="og:title" content="2025 Tesla Model Y Long Range – $37,500">
 <meta property="og:description" content="One owner · 30,767 miles · Full Self-Driving · clean title · no accidents · Pasadena, CA">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://patrickd007.github.io/tesla-model-y-for-sale/img/og.jpg">
+<meta property="og:image" content="https://patrickd007.github.io/tesla-model-y-for-sale/img/og.jpg?v=3">
 <meta name="twitter:card" content="summary_large_image">
 <style>
 :root{
@@ -25,7 +25,7 @@ a{color:inherit}
 
 /* hero */
 .hero{position:relative;min-height:62vh;display:flex;align-items:flex-end;color:#fff;
-  background:#000 url("img/full/0208.jpg") center 40%/cover no-repeat}
+  background:#000 url("img/full/0208.jpg?v=3") center 40%/cover no-repeat}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.25) 55%,rgba(0,0,0,.05) 100%)}
 .hero .wrap{position:relative;z-index:1;width:100%;padding-bottom:28px;padding-top:120px}
 .eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
@@ -171,10 +171,10 @@ groups.forEach(g=>{
   sec.innerHTML=`<h2 class="sec">${g.title}</h2><p class="count">${g.ids.length} photos</p><div class="grid"></div>`;
   const grid=sec.querySelector(".grid");
   g.ids.forEach((id,i)=>{
-    const idx=all.length; all.push({src:`img/full/${id}.jpg`,cap:`${g.title} · ${i+1} of ${g.ids.length}`});
+    const idx=all.length; all.push({src:`img/full/${id}.jpg${id==="0208"?"?v=3":""}`,cap:`${g.title} · ${i+1} of ${g.ids.length}`});
     const b=document.createElement("button"); b.type="button"; b.dataset.i=idx;
     b.setAttribute("aria-label",`Open ${g.alt.toLowerCase()} photo ${i+1}`);
-    b.innerHTML=`<img loading="lazy" decoding="async" src="img/thumb/${id}.jpg" alt="${g.alt} photo ${i+1} of the 2025 Tesla Model Y">`;
+    b.innerHTML=`<img loading="lazy" decoding="async" src="img/thumb/${id}.jpg${id==="0208"?"?v=3":""}" alt="${g.alt} photo ${i+1} of the 2025 Tesla Model Y">`;
     grid.appendChild(b);
   });
   host.appendChild(sec);
