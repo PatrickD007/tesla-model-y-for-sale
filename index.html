@@ -136,7 +136,7 @@ footer{margin:56px 0 40px;padding-top:20px;border-top:1px solid var(--line);colo
       <button type="button" data-src="img/vin.jpg" data-cap="VIN decode result for 7SAYGDED0SF271715" aria-label="Enlarge VIN decode screenshot">
         <img src="img/vin.jpg" alt="Screenshot of a VIN decoder showing 7SAYGDED0SF271715 decoded as a 2025 Tesla Model Y, built in Fremont, CA" width="1400" height="860">
       </button>
-      <p>Don't take my word for it. <a href="https://vpic.nhtsa.dot.gov/decoder/Decoder?VIN=7SAYGDED0SF271715&ModelYear=2025" target="_blank" rel="noopener">Decode this VIN on NHTSA's site ↗</a></p>
+      <p>Don't take my word for it: paste the VIN into any free VIN decoder to check.</p>
     </aside>
   </section>
 
@@ -158,8 +158,7 @@ footer{margin:56px 0 40px;padding-top:20px;border-top:1px solid var(--line);colo
 // Photo groups. Numbers are the original IMG_#### frame numbers.
 const range=(a,b)=>Array.from({length:b-a+1},(_,i)=>String(a+i).padStart(4,"0"));
 const groups=[
-  {title:"Exterior",       alt:"Exterior",       ids:range(207,238)},
-  {title:"Wheels & tires", alt:"Wheel and tire", ids:range(239,241)},
+  {title:"Exterior",       alt:"Exterior",       ids:range(207,241)},
   {title:"Frunk & cargo",  alt:"Frunk and cargo",ids:range(242,246)},
   {title:"Interior",       alt:"Interior",       ids:range(247,270)},
 ];
