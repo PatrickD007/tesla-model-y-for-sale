@@ -163,8 +163,8 @@ const groups=[
   {title:"Interior",       alt:"Interior",       ids:range(247,270)},
 ];
 // Put the cover shot first in Exterior.
-// Software-screen photo first in Interior.
-groups[2].ids=["3417",...groups[2].ids];
+// Software-screen photo and VIN screenshot first in Interior.
+groups[2].ids=["3417","0383",...groups[2].ids];
 groups[0].ids=["0208",...groups[0].ids.filter(i=>i!=="0208")];
 
 const all=[]; const host=document.getElementById("galleries");
